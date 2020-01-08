@@ -1,0 +1,21 @@
+﻿@model WebDemo1.Models.RegisterModel
+@{
+    ViewBag.Title = "About";
+}
+<h2>Information</h2>
+
+@if (Model.Registered ==false)
+{
+<form method="post">
+    Namn: @Html.TextBoxFor(p => p.Name)
+    <br />
+    Email: @Html.TextBoxFor(p => p.Email)
+    <br />
+    Kortnummer: @Html.TextBoxFor(p => p.CardNo)
+    <br />
+    <input type="submit" value="Registrera" />
+</form>
+}
+else { 
+<p>Du är registrerad</p>
+}
